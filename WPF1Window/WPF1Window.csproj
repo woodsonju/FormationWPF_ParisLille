@@ -56,6 +56,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BindingTest\1-IntroBinding.xaml.cs">
+      <DependentUpon>1-IntroBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingTest\2-UsingDataContext.xaml.cs">
+      <DependentUpon>2-UsingDataContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingTest\3-UpdateSourceTriggerProperty.xaml.cs">
+      <DependentUpon>3-UpdateSourceTriggerProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingTest\4-BindingViaCodeBehind.xaml.cs">
+      <DependentUpon>4-BindingViaCodeBehind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingTest\5-RespondingToChange.xaml.cs">
+      <DependentUpon>5-RespondingToChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingTest\Model\User.cs" />
     <Compile Include="Controles\1-ControleCommunWPF.xaml.cs">
       <DependentUpon>1-ControleCommunWPF.xaml</DependentUpon>
     </Compile>
@@ -90,6 +106,26 @@
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Page Include="BindingTest\1-IntroBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindingTest\2-UsingDataContext.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindingTest\3-UpdateSourceTriggerProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindingTest\4-BindingViaCodeBehind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindingTest\5-RespondingToChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controles\1-ControleCommunWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -178,5 +214,6 @@
     <Content Include="Images\TT++ - Piste 12 - V1 Douce.wma" />
     <Resource Include="Images\Water fallback.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

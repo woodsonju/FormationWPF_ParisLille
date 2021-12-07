@@ -1,0 +1,38 @@
+﻿<Window x:Class="WPF1Window.BindingTest._5_RespondingToChange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF1Window.BindingTest"
+        mc:Ignorable="d"
+        Title="_5_RespondingToChange" Height="450" Width="800">
+    <DockPanel Margin="10">
+        <!--
+            Il existe deux scénarios différents que vous pouvez ou non souhaiter gérer lorsque vous traiter des modifications
+            de vos données : 
+                - Par les Modifications de la liste des élements
+                - Par les modifications des propriétés liées dans chacun des objets de données
+       
+            WPF propose deux solutions : "ObservableCollection" et l'interface "INotifyPropertyChanged"
+           
+            Premiere étape : Sans ObservableCollection et sans l'interface INotifyPropertyChanged
+            Observation : Aucune modification est refletée sur l'interface graphique
+        
+            Deuxième étape : Utilisation de "ObservableCollection"
+                 L'ajout et la suppression fonctionne mais pas la modification
+                  POURQUOI ? 
+                  Car le changement se produira sur l'objet de données lié lui-même et non sur les éléments graphiques
+                  Ce qui se passe ici, c'est que nos objets ne sont pas capable d'informer les éléments graphiques des 
+                  modifications de valeur sur leurs propriétés
+                  Dans la Troisième étape : Utilisation de l'interface INotifyPropertyChanged
+            
+        -->
+        <StackPanel DockPanel.Dock="Right" Margin="5,10,5,0">
+            <Button Name="btnAddUser" Click="btnAddUser_Click_1">Add User</Button>
+            <Button Name="btnChangeUser" Click="btnChangeUser_Click">Change User</Button>
+            <Button Name="btnDeleteUser" Click="btnDeleteUser_Click">Delete User</Button>
+        </StackPanel>
+        <!--DisplayMemberPath spécifie le chemin d'accès à la propriété idem que le "{binding Name}"-->
+        <ListBox x:Name="lstUsers" DisplayMemberPath="Name"/>
+    </DockPanel>
+</Window>
