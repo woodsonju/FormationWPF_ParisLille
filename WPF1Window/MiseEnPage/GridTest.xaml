@@ -1,0 +1,80 @@
+﻿<Window x:Class="WPF1Window.MiseEnPage.GridTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF1Window.MiseEnPage"
+        mc:Ignorable="d"
+        Title="GridTest" Height="450" Width="800">
+    <!--
+        Pour diviser l'espace, on va utiliser les propriétés "ColumnDefinitions" et RowDefinitions" du contrôle Grid
+        <Ce sont des collections pouvant contenir respectivement autant d'objets "RowDefinition" ou "ColumnDefinition"
+    
+        On peut définir la hauteur de chacune des lignes au travers de la propriété "Height" de chaqiue objet RowDefinition
+        On peut definir la largeur de chaque colonne grâce à la propriété Width des objets de type ColumnDefinition
+    
+        Il existe trois moyens de spécifier les tailles par ordre de priorité : 
+            - Une valeur en nombre de pixels 
+            - Auto: ligne ou colonne s'adapte à son contenu. Si elle n'a pas de contenu elle ne sera pas visible
+            - * : La taille est calculée en fonction d'un coefficient (ex : 2*). Ce coefficient vaut 1 s'il n'est pas spécifier 
+                  explicitement
+        
+        Les propriétés Grid.Row et Grid.Column permettent de positonner des contrôles dans la grille. 
+    
+        La valeur par defaut de ses propriétés est 0.
+    -->
+
+    <!--Exmeple 1 : On devise l'espace disponible en deux colonnes, qui partageront l'espace à parts égales
+        en utilisant "l'etoile :  * " -->
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button VerticalAlignment="Top" HorizontalAlignment="Center">Button</Button>
+        <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">Button2</Button>
+    </Grid>-->
+
+    <!--Exemple 2: -->
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Button>Bouton 1</Button>
+        <Button Grid.Column="1">Bouton 2 with long text</Button>
+        <Button Grid.Column="2">Button 3</Button>
+    </Grid>-->
+    
+    <!--Exemple 3: Grid Spanning-->
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Grid.ColumnSpan="2">Button 1</Button>
+        <Button Grid.Column="2">Button 2</Button>
+        <Button Grid.Row="1">Button 3</Button>
+        <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Content="Button 4"/>
+        <Button Grid.Row="2" Content="Button 5"/>
+    </Grid>-->
+    
+    <!--Exemple 5 : GridSplitter Séparateur de grille horizontale /verticale-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap">Left Side</TextBlock>
+        <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
+        <TextBlock Grid.Column="2"  FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap">Right Side</TextBlock>
+    </Grid>
+</Window>

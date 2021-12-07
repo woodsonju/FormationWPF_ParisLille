@@ -1,0 +1,28 @@
+﻿<Window x:Class="WPF1Window.MiseEnPage.StackPanelTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF1Window.MiseEnPage"
+        mc:Ignorable="d"
+        Title="StackPanelTest" Height="450" Width="400">
+    <!--Empilement d'éléments qui peuvent dépasser le cadre (pas de wrap) 
+        Par défaut l'empilements des éléments est vertical
+        Atribut d'orientation-->
+    <!--<StackPanel Orientation="Horizontal">
+        <Button>Button1</Button>
+        <Button>Button2</Button>
+        <Button>Button3</Button>
+        <Button>Button4</Button>
+        <Button>Button5</Button>
+        <Button>Button6</Button>
+    </StackPanel>-->
+    <StackPanel Orientation="Horizontal">
+        <Button VerticalAlignment="Top">Button1</Button>
+        <Button VerticalAlignment="Center">Button2</Button>
+        <Button VerticalAlignment="Bottom">Button3</Button>
+        <Button VerticalAlignment="Bottom">Button4</Button>
+        <Button VerticalAlignment="Center">Button5</Button>
+        <Button VerticalAlignment="Top">Button6</Button>
+    </StackPanel>
+</Window>
