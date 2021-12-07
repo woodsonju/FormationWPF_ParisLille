@@ -66,6 +66,9 @@
     <Compile Include="Fichier\OpenFileDialogTest.xaml.cs">
       <DependentUpon>OpenFileDialogTest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Fichier\SaveFileDialogTest.xaml.cs">
+      <DependentUpon>SaveFileDialogTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MiseEnPage\CanvasTest.xaml.cs">
       <DependentUpon>CanvasTest.xaml</DependentUpon>
     </Compile>
@@ -96,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Fichier\OpenFileDialogTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fichier\SaveFileDialogTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
