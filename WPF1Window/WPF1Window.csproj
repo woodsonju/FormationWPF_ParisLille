@@ -71,7 +71,11 @@
     <Compile Include="BindingTest\5-RespondingToChange.xaml.cs">
       <DependentUpon>5-RespondingToChange.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BindingTest\6-ValueConversionWithIValueConverter.xaml.cs">
+      <DependentUpon>6-ValueConversionWithIValueConverter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BindingTest\Model\User.cs" />
+    <Compile Include="BindingTest\Model\YesNoToBooleanConverter.cs" />
     <Compile Include="Controles\1-ControleCommunWPF.xaml.cs">
       <DependentUpon>1-ControleCommunWPF.xaml</DependentUpon>
     </Compile>
@@ -84,6 +88,12 @@
     </Compile>
     <Compile Include="Fichier\SaveFileDialogTest.xaml.cs">
       <DependentUpon>SaveFileDialogTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MiseEnForme\MiseEnFormeTest.xaml.cs">
+      <DependentUpon>MiseEnFormeTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MiseEnForme\WindowResource.xaml.cs">
+      <DependentUpon>WindowResource.xaml</DependentUpon>
     </Compile>
     <Compile Include="MiseEnPage\CanvasTest.xaml.cs">
       <DependentUpon>CanvasTest.xaml</DependentUpon>
@@ -126,6 +136,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BindingTest\6-ValueConversionWithIValueConverter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controles\1-ControleCommunWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,6 +168,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MiseEnForme\MiseEnFormeTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MiseEnForme\WindowResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MiseEnPage\CanvasTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

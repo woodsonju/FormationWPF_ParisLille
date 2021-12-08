@@ -1,0 +1,40 @@
+﻿<Window x:Class="WPF1Window.BindingTest._6_ValueConversionWithIValueConverter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF1Window.BindingTest"
+        xmlns:local1="clr-namespace:WPF1Window.BindingTest.Model"
+        mc:Ignorable="d"
+        Title="_6_ValueConversionWithIValueConverter" Height="450" Width="800">
+    <!--On déclare un objet 'YesNoToBooleanConverter' dans la collection 'resources de l'élément 'Windowws' 
+    dont la clé est 'YesNoToBooleanConverter-->
+    <Window.Resources>
+        <local1:YesNoToBooleanConverter x:Key="YesNoToBooleanConverter" />
+    </Window.Resources>
+    <StackPanel Margin="10">
+        <!--
+        Jusqu'à présent, nous avons utilisé des liaisons de données où les propriétes d'envoi et de réception était
+        compatible.
+        Cependant vous pouvez être dans des situations où vous souhaitez utiliser  des liaisons où les types ne
+        sont pas compatible. 
+    
+        Dans ce cas il faut utiliser un convertisseur de valeur. 
+        Pour cela on va utiliser une classe qui devra implementer l'interface IValueConverter
+        Cette classe sera notre convertisseur
+    
+        Code XAML : 
+            Nous commençons par déclarer une instance de notre convertisseur en tant que ressource pour la fenêtre. 
+    -->
+        <TextBox Name="txtValue" Margin="0,10"/>
+        <WrapPanel Margin="0,10">
+            <TextBlock Text="Current value is : " />
+            
+            <!--On lie la valeur du TextBox au contrôle TextBlock-->
+            <TextBlock Text="{Binding ElementName=txtValue, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}" />
+        </WrapPanel>
+        <CheckBox IsChecked="{Binding ElementName=txtValue, Path=Text, Converter={StaticResource YesNoToBooleanConverter}}"
+                  Content="Yes"/>
+    </StackPanel>
+    
+</Window>
