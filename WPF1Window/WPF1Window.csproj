@@ -79,10 +79,16 @@
     <Compile Include="Controles\1-ControleCommunWPF.xaml.cs">
       <DependentUpon>1-ControleCommunWPF.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controles\LoginUserControl.xaml.cs">
+      <DependentUpon>LoginUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controles\MediaTest.xaml.cs">
       <DependentUpon>MediaTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controles\Model\Client.cs" />
+    <Compile Include="Controles\UseLoginUserControl.xaml.cs">
+      <DependentUpon>UseLoginUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fichier\OpenFileDialogTest.xaml.cs">
       <DependentUpon>OpenFileDialogTest.xaml</DependentUpon>
     </Compile>
@@ -144,7 +150,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controles\LoginUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controles\MediaTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UseLoginUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

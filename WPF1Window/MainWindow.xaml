@@ -6,7 +6,46 @@
         xmlns:local="clr-namespace:WPF1Window"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel x:Name="dockPanel1">
+        <Menu x:Name="menu1" Height="23" Width="Auto" DockPanel.Dock="Top">
+            <MenuItem x:Name="miFichier" Header="_Fichier">
+                <MenuItem x:Name="miOuvrir" Header="Ouvrir" Click="miOuvrir_Click" />
+                <MenuItem x:Name="miEnrengistrer" Header="Enregistrer" Click="miEnrengistrer_Click" />
+                <MenuItem x:Name="miFolderBrowser" Header="Selectionner un dossier" Click="miFolderBrowser_Click" />
+                <Separator />
+                <MenuItem x:Name="miQuitter" Header="Quitter" Click="miQuitter_Click" />
+            </MenuItem>
+            <MenuItem x:Name="mFenetre" Header="_Fenêtres">
+                <MenuItem x:Name="miModale" Header="Modale" Click="miModale_Click" />
+                <MenuItem x:Name="miNonModale" Header="Non Modale" Click="miNonModale_Click" />
+                <MenuItem x:Name="miBoiteSimple" Header="Boitede dialogue simple" Click="miBoiteSimple_Click" />
+                <MenuItem x:Name="miBoiteP" Header="Boite de dialogue personnalisée" Click="miBoiteP_Click" />
+            </MenuItem>
+            <MenuItem x:Name="MiseEnPage" Header="_Mise en page">
+                <MenuItem x:Name="miStackP" Header="StackPanel" Click="miStackP_Click" />
+                <MenuItem x:Name="miWrapPanel" Header="WrapPanel" Click="miWrapPanel_Click" />
+                <MenuItem x:Name="miDockPanel" Header="DockPanel" Click="miDockPanel_Click" />
+                <MenuItem x:Name="miGrid" Header="Grid, GridSplitter, GridSpanning" Click="miGrid_Click" />
+                <MenuItem x:Name="miCanvas" Header="Canvas" Click="miCanvas_Click" />
+            </MenuItem>
+            <MenuItem x:Name="mControles" Header="Contrôles">
+                <MenuItem x:Name="miControleCommunWPF" Header="Les contrôles communs" Click="miControleCommunWPF_Click" />
+                <MenuItem x:Name="miMedia" Header="Image - MediaElement" Click="miMedia_Click" />
+                <MenuItem x:Name="miUserControl" Header="UserControl1" Click="miUserControl_Click" />
+            </MenuItem>
+            <MenuItem x:Name="mBindings" Header="Bindings">
+                <MenuItem  x:Name="miIntroBinding" Header="Introduction au binding" Click="miIntroBinding_Click" />
+                <MenuItem x:Name ="miUsingDataContextBinding" Header="Utilisation de Data-Context" Click="miUsingDataContextBinding_Click"   />
+                <MenuItem x:Name="miBindingViaCodeBehind" Header="Binding via code-behind" Click="miBindingViaCodeBehind_Click" />
+                <MenuItem x:Name="miUpdateSourceTriggerProperty" Header="UpdateSource TriggerProperty" Click="miUpdateSourceTriggerProperty_Click" />
+                <MenuItem x:Name="miRespondingToChange" Header="Responding to change" Click="miRespondingToChange_Click" />
+                <MenuItem x:Name="miValueConvertionWithIValueConverter" Header="Value conversion with IValueConverter" Click="miValueConvertionWithIValueConverter_Click" />
+            </MenuItem>
+            <MenuItem x:Name="mRessources" Header="_Mise en forme">
+                <MenuItem x:Name="miRessourceBase" Header="StaticRessource - DynamicRessource" Click="miRessourceBase_Click" />
+                <MenuItem x:Name="miMiseEnForme" Header="Styles - Templates" Click="miMiseEnForme_Click"  />
+            </MenuItem>
+        </Menu>
+        <Button Height="25"/>
+    </DockPanel>
 </Window>
