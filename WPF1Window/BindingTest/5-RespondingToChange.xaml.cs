@@ -26,6 +26,11 @@ namespace WPF1Window.BindingTest
         //private List<User> users = new List<User>();
 
         //Deuxième étape
+        /*
+         * Les données sont sous forme de liste de users observable.
+         * Cela permettra de tracer les modifications apportées à ses éléments et d'informer de tous 
+         * changements faits sur la liste des Users aux classes d'affichages WPF
+         */
         private ObservableCollection<User> users = new ObservableCollection<User>();
 
         public _5_RespondingToChange()

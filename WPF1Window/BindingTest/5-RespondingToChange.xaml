@@ -15,16 +15,22 @@
        
             WPF propose deux solutions : "ObservableCollection" et l'interface "INotifyPropertyChanged"
            
-            Premiere étape : Sans ObservableCollection et sans l'interface INotifyPropertyChanged
+            PREMIERE ETAPE : Sans ObservableCollection et sans l'interface INotifyPropertyChanged
             Observation : Aucune modification est refletée sur l'interface graphique
         
-            Deuxième étape : Utilisation de "ObservableCollection"
+            DEUXIEME ETAPE : Utilisation de "ObservableCollection"
                  L'ajout et la suppression fonctionne mais pas la modification
                   POURQUOI ? 
                   Car le changement se produira sur l'objet de données lié lui-même et non sur les éléments graphiques
                   Ce qui se passe ici, c'est que nos objets ne sont pas capable d'informer les éléments graphiques des 
                   modifications de valeur sur leurs propriétés
                   Dans la Troisième étape : Utilisation de l'interface INotifyPropertyChanged
+        
+            TROISIEME ETAPE :
+                On va implementer notre classe User avec l'interface INotifyPropertyChanged
+                En faisant cela, nos objets utilisateur seront capables d'alerter la couche d'interface utilisateur 
+                des modifications apportées à ses propriétés.
+                On informe les éléments graphiques des modifications de valeur sur les propriétés.
             
         -->
         <StackPanel DockPanel.Dock="Right" Margin="5,10,5,0">
